@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+// Minimal mock fw CLI: fw dev | fw build | fw pack
+const cmd = process.argv[2]
+if (cmd === 'dev') console.log('Mock: start dev (run `npm run dev`)')
+else if (cmd === 'build') console.log('Mock: build (run `npm run build`)')
+else if (cmd === 'pack') console.log('Mock: pack (create signed bundle)')
+else console.log('fw mock CLI — commands: dev, build, pack')

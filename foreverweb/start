@@ -1,0 +1,3 @@
+cd /workspaces/codespaces-blank/foreverweb && npm run dev & sleep 1 && ss -ltnp | grep :5173 || true
+[3] 13938
+

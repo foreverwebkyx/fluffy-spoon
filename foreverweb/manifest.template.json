@@ -1,0 +1,11 @@
+{
+  "id": "com.foreverweb.sample",
+  "name": "Sample App",
+  "version": "0.1.0",
+  "author": "You",
+  "description": "A sample app manifest template for ForeverWeb",
+  "permissions": ["fs"],
+  "entry": "/dist/index.js",
+  "icon": "/assets/icon.png",
+  "compat": ["web"]
+}

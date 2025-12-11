@@ -1,0 +1,17 @@
+{
+  "username": "testuser",
+  "email": "test@example.com",
+  "uid": "FW-abcdef123456",
+  "passwordHash": "sha256$008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601",
+  "pinEnabled": false,
+  "pinHash": null,
+  "otpPending": false,
+  "otpCode": null,
+  "otpExpiry": null,
+  "createdAt": "2025-12-11T00:00:00.000Z",
+  "lastLogin": "2025-12-11T21:07:01.726Z",
+  "theme": {
+    "accent": "red",
+    "mode": "dark"
+  }
+}

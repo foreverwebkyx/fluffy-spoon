@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg:#000000;
+  --panel:#0b0b0b;
+  --accent:#ff1a2a;
+  --anim-mult: 1;
+}
+
+/* Simple crimson theme touches */
+.text-crimson{ color: var(--accent) }
+.bg-crimson{ background-color: var(--accent) }
+
+/* Reflective icons */
+.reflective-icon{ position: relative }
+.reflective-icon::after{ content: '' ; position: absolute; left: 0; right: 0; bottom: -6px; height: 12px; background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0)); transform: skewY(-8deg); opacity: 0.7; border-radius: 6px }
+
+/* Button ripple */
+.ripple-btn{ position: relative; overflow: hidden }
+.ripple-btn::after{ content: ''; position: absolute; width: 20px; height: 20px; background: rgba(255,30,42,0.18); border-radius: 50%; transform: scale(0); opacity: 0; pointer-events: none; transition: transform calc(300ms * var(--anim-mult)) ease, opacity calc(300ms * var(--anim-mult)) ease }
+.ripple-btn:active::after{ transform: scale(12); opacity: 1; transition: transform calc(600ms * var(--anim-mult)) cubic-bezier(.2,.9,.2,1), opacity calc(600ms * var(--anim-mult)) }
+
+@keyframes pulse-slow {
+  0% { opacity: 0.6; transform: scale(1) }
+  50% { opacity: 0.9; transform: scale(1.04) }
+  100% { opacity: 0.6; transform: scale(1) }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(-4px) }
+  50% { transform: translateX(4px) }
+  75% { transform: translateX(-2px) }
+  100% { transform: translateX(0) }
+}
+
+.animate-pulse-slow { animation: pulse-slow calc(3s * var(--anim-mult)) ease-in-out infinite }
+.animate-shake { animation: shake calc(0.5s * var(--anim-mult)) linear }
+
+@keyframes windowEnter {
+  0% { transform: translateY(8px) scale(0.98); opacity: 0 }
+  60% { transform: translateY(-6px) scale(1.02); opacity: 1 }
+  100% { transform: translateY(0) scale(1); opacity: 1 }
+}
+.animate-window-enter { animation: windowEnter calc(420ms * var(--anim-mult)) cubic-bezier(.2,.9,.2,1) }
+
+/* Shockwave effect (subtle) */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-slideDown { animation: slideDown calc(300ms * var(--anim-mult)) ease-out }
+.animate-blink { animation: blink calc(1s * var(--anim-mult)) infinite }
+.animate-spin-slow { animation: spinSlow calc(8s * var(--anim-mult)) linear infinite }
+
+/* Shockwave effect (subtle) */
+.shockwave {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0; height: 0; border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(255,30,42,0.12), rgba(255,30,42,0));
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Subtle dimming for inactive windows */
+.window-dimmed { filter: brightness(0.85) saturate(0.85) }
+

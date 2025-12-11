@@ -1,0 +1,17 @@
+{
+  "username": "wewdw",
+  "email": "you@example.com",
+  "uid": "FW-1ecbf35a4aee",
+  "passwordHash": "sha256$008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601",
+  "pinEnabled": false,
+  "pinHash": null,
+  "otpPending": false,
+  "otpCode": null,
+  "otpExpiry": null,
+  "createdAt": "2025-12-11T20:59:54.057Z",
+  "lastLogin": null,
+  "theme": {
+    "accent": "red",
+    "mode": "dark"
+  }
+}
